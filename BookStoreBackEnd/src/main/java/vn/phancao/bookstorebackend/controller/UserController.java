@@ -1,15 +1,12 @@
 package vn.phancao.bookstorebackend.controller;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import vn.phancao.bookstorebackend.dto.response.ResponseData;
 import vn.phancao.bookstorebackend.dto.response.UserDetailResponse;
-import vn.phancao.bookstorebackend.model.User;
 import vn.phancao.bookstorebackend.service.UserService;
 
 import java.util.List;
@@ -26,8 +23,8 @@ public class UserController {
         var result = this.userService.getAllUser();
 
         return ResponseData.<List<UserDetailResponse>>builder()
-                .code(HttpStatus.CREATED.value())
-                .message("User created")
+                .code(HttpStatus.OK.value())
+                .message("Get All User")
                 .data(result)
                 .build();
     }

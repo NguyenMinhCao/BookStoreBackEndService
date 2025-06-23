@@ -3,7 +3,6 @@ package vn.phancao.bookstorebackend.service.impl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import vn.phancao.bookstorebackend.dto.response.UserDetailResponse;
-import vn.phancao.bookstorebackend.model.User;
 import vn.phancao.bookstorebackend.repository.UserRepository;
 import vn.phancao.bookstorebackend.service.UserService;
 
