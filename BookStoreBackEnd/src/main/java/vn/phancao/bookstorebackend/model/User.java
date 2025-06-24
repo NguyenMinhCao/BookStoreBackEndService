@@ -50,4 +50,7 @@ public class User extends AbstractEntity {
 
     @OneToMany(mappedBy = "author",cascade = CascadeType.ALL)
     private Set<Book> books;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<UserHasRole> userHasRoles;
 }
