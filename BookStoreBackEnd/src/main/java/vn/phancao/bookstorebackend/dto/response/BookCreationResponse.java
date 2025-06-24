@@ -5,32 +5,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 @Getter
 @Setter
 @Builder
-public class BookDetailResponse {
-
-    private Long id;
-
+public class BookCreationResponse {
+    private String authorName;
     private String title;
-
     private String isbn;
-
     private String description;
-
     private BigDecimal price;
-
-    private Long stock;
-
-    private String publisher;
-
-    private String thumbnail;
-
     private String language;
-
-    private Long views;
-
-    private LocalDate publishedDate;
+    private String thumbnail;
+    private String bookPath;
 }
