@@ -29,9 +29,10 @@ public class SecurityConfig {
                         .requestMatchers("/api/v1/auth/**").permitAll()
                         // Yêu cầu xác thực cho tất cả các endpoint khác
                         .anyRequest().authenticated()
-                );
+                )
         // .httpBasic(); // (Tùy chọn) Nếu bạn muốn sử dụng xác thực HTTP Basic
         // .formLogin(); // (Tùy chọn) Nếu bạn muốn sử dụng xác thực form (ít dùng cho REST API)
+        .formLogin(f -> f.disable());
 
         return http.build();
     }
